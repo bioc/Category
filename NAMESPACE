@@ -44,8 +44,10 @@ exportMethods("hyperGTest",
               "isConditional",
               "oddsRatios",
               "expectedCounts",
-              
-              "show")
+              "htmlReport",
+
+              "show",
+              "summary")
 
 export(geneGoHyperGeoTest, geneKeggHyperGeoTest,
        ".doHyperGTest")
