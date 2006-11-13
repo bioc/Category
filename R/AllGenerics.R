@@ -66,6 +66,6 @@ setGeneric("categorySubsetIds<-", function(r, value) standardGeneric("categorySu
 
 setGeneric("isConditional", function(r) standardGeneric("isConditional"))
 
-setGeneric("htmlReport", function(r, file="", append=TRUE, label="", ...)
+setGeneric("htmlReport", function(r, file="", append=FALSE, label="", ...)
            standardGeneric("htmlReport"),
            signature=c("r"))
