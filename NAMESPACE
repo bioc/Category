@@ -1,5 +1,4 @@
 import("methods")
-import("AnnotationDbi")
 importMethodsFrom("Biobase", "annotation", "description")
 importFrom("RBGL", "tsort")
 

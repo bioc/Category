@@ -128,6 +128,13 @@ annBaseName <- function(p) {
     baseName <- p@datPkg@baseName
 }
 
+revmap <- function(x, objName=NULL) {
+    if (!is.environment(x))
+      stop("expecting 'x' to be an environment object")
+    l2e(reverseSplit(as.list(x)))
+}
+
+
 makeChrMapToEntrez <- function(chip, univ) {
     .getMap <- function(map)
       getAnnMap(map=map, chip=chip)
