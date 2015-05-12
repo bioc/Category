@@ -117,11 +117,10 @@ getKeggToEntrezMap <- function(p) {
 }
 
 .setKeytype <- function(p){
-    if(class(p@datPkg)=='YeastDatPkg'){
-        keytype <- 'ORF'
-    }else{
-        keytype <- 'PROBEID'
-    }
+    keytype <- switch(class(p@datPkg),
+                      YeastDatPkg = "ORF",
+                      Org.XX.eg.DatPkg = "ENTREZID",
+                      "PROBEID")
     keytype
 }
 
