@@ -145,11 +145,11 @@ XXX_getSummaryGeneric_XXX <- function() {
     ## FIXME: the methods packge is broken for this case
     ## so we have to find the right summary method ourselves
     places <- find("summary")
-    ## take the first standardGeneric
+    ## take the first genericFunction
     f <- NULL
     for (i in seq(along=places)) {
         f <- get("summary", places[i])
-        if (is(f, "standardGeneric"))
+        if (is(f, "genericFunction"))
           break
         else
           f <- NULL
